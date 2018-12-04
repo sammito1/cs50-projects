@@ -98,7 +98,7 @@ $ ./recover card.raw
 
 # Problem Set 5: Mispellings 
 
-## (Speller)[https://docs.cs50.net/problems/speller/speller.html]
+## [Speller](https://docs.cs50.net/problems/speller/speller.html)
 Implement a program that spell-checks a file, per the below.
 ```
 $ ./speller texts/austinpowers.txt
