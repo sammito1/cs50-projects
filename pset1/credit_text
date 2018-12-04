@@ -1,0 +1,68 @@
+# program must PROMPT user for a CC number and report (via printf) whether it's a valid AMEX, MasterCard, or Visa.
+
+
+Luhn's Algo:
+
+Step 0: Multiply every other digit by 2, starting with the number's second-to-last digit, and then add
+those digits together.
+
+Step 1: Add the sum of to the sum of the digits that weren't multiplied by 2.
+
+Step 2: If the last digit is 0, number is VALID.
+
+--------------------------------------------------------------------------------------------------------------------
+
+Example:
+
+AMEX: 378282246310005
+
+* every other digit, starting with the number's SECOND TO LAST DIGIT
+
+7, 2, 2, 4, 3, 0, 0
+
+* multiply array by 2
+
+14, 4, 4, 8, 6, 0, 0
+
+* add products' DIGITS. NOT THE PRODUCTS.
+
+1 + 4 + 4 + 4 + 8 + 6 + 0 + 0
+
+== 27
+
+* add above sum to the sum of the digits that WERE NOT multiplied by two.
+
+digits not multiplied by 2:
+
+3, 8, 8, 2, 6, 1, 0, 5 -> sum -> 33
+
+33 + (27) == 60
+
+* check final digit of final sum
+
+60 -> last digit -> 0
+
+success, this is valid!
+
+--------------------------------------------------------------------------------------------------------------------
+
+Company ID's and length:
+
+AMEX:
+
+- 15 digit numbers
+- Start with 34 or 37
+
+MasterCard:
+
+- 16 digit numbers
+- Start with 51, 52, 53, 54, or 55
+
+Visa:
+
+- 13 and 16 digit numbers
+- Start with 4
+
+--------------------------------------------------------------------------------------------------------------------
+
+-- You can expose the nth digit by dividing the nth power of 10 --
